@@ -14,3 +14,10 @@ INSERT INTO employees VALUES
 (4, 'Mona', 'HR', 4200),
 (5, 'Koorosh', 'Sales', 6000),
 (6, 'Zohreh', 'Sales', 3500);
+
+
+SELECT
+    emp_name,
+    department
+FROM employees
+WHERE salary = (SELECT MAX(salary) FROM employees );
