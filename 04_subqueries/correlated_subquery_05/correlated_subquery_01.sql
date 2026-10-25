@@ -13,3 +13,11 @@ INSERT INTO employees VALUES
 (5, 'Koorosh', 'Sales', 6000),
 (6, 'Zohreh', 'Sales', 3500);
 
+SELECT 
+    emp_name,
+    department,
+    salary
+FROM employees AS e1
+WHERE salary > (
+    SELECT AVG(salary) FROM employees as e2
+     WHERE e1.department = e2.department);
