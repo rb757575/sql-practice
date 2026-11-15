@@ -14,7 +14,6 @@ INSERT INTO employees VALUES
 (4, 'Mona', 'HR', 4200),
 (5, 'Koorosh', 'Sales', 6000),
 (6, 'Zohreh', 'Sales', 3500);
-
 WITH companyAVG AS(
    SELECT AVG(salary) AS avg_sal FROM employees
     )
